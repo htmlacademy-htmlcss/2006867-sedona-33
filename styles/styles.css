@@ -167,6 +167,10 @@ color: inherit;
     height: 384px;
 }
 
+.footer-social-list{
+    list-style-type: none;
+}
+
 .catalog-header{
     background-image: url("../images/background-catalog1.jpg");
     color: #ffffff;
@@ -314,6 +318,7 @@ line-height: 39px
     line-height: 25px;
     font-weight: 700; 
     border-radius: 4px;
+    text-decoration: none;;
 }
 
 .pagination{
