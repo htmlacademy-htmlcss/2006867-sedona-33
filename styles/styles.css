@@ -179,15 +179,22 @@ color: inherit;
     font-weight: 400;
     text-align: center;
 }
-.button-search{
+.proposal-search{
+    width: 575px;;
     background: #756257;
+    border-radius: 10px;
+    text-align: center;
+    margin: 0 auto;
+}
+.button-search{
+    
     color:#FFFFFF;
     font-size: 20px;
     line-height: 36px;
     font-weight: 700;
-    text-align: center;
+    
     text-decoration: none;
-    border-radius: 10px;
+    
 
 }
 .newsletter{
@@ -332,8 +339,8 @@ color: inherit;
 }
 .products{
     width: 1057px;
-    margin-left: 71px;
-    display: flex;
+    margin-left: 110px;
+    
 }
 .button-reset{
 font-size: 18px;
@@ -514,4 +521,8 @@ line-height: 39px
 .field{
     width: 600px;
     margin-right: 0;
+}
+
+.product-wrapper{
+    display:flex
 }
