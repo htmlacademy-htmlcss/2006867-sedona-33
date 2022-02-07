@@ -58,6 +58,7 @@ color: inherit;
 
 .main-container {
     flex-grow: 1;
+    
   }
 
 .navigation {
@@ -71,6 +72,7 @@ color: inherit;
     margin: 0 auto;
   }
 .decor-image {
+    
     display: block;
     margin: 0 auto;
     background-image: url("../images/index-background.jpg");
@@ -81,9 +83,13 @@ color: inherit;
     height: 485px;
 
 }
-
+.welcome-logo{
+    display: block;
+    margin: 0 auto;
+}
 .advantages-list{
     list-style-type: none;
+    padding:0;
 }
 
 .advantages-detail{
@@ -165,11 +171,20 @@ color: inherit;
     text-align: center;
 }
 
+.proposal{
+    width: 1200px;
+    
+    
+}
+
 .proposal-title{
     font-size: 30px;
     line-height: 36px;
     font-weight: 700;
-    text-align: center; 
+    width: 720px;
+    margin: 0 auto;
+    text-align: center;
+    
 }
 
 .proposal-information{
@@ -180,20 +195,27 @@ color: inherit;
     text-align: center;
 }
 .proposal-search{
-    width: 575px;;
+    
     background: #756257;
     border-radius: 10px;
     text-align: center;
+    display:block;
     margin: 0 auto;
+    
 }
 .button-search{
-    
+    border-radius: 10px;
+    display: block;
+    width: 575px;
     color:#FFFFFF;
     font-size: 20px;
     line-height: 36px;
     font-weight: 700;
-    
+    background: #756257; 
     text-decoration: none;
+    margin: 0 auto;
+    text-align: center;
+
     
 
 }
@@ -206,12 +228,12 @@ color: inherit;
     height: 411px;
     margin: 0 auto;
 }
-
-.wrapper{
-    display: block;
+.newsletter-form{
     width: 800px;
+    display: block;
     margin: 0 auto;
 }
+
 .newsletter-title{
     text-align: center;
 }
