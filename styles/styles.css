@@ -387,11 +387,10 @@ color: inherit;
 
 .catalog-filter{
     display:flex;
+    justify-content: space-around;
 }
 
-.catalog-filter-group{
-    margin-left: 71px;
-}
+
 .catalog-filter-title {
     font-size: 20px;
     line-height: 25px;
@@ -422,15 +421,24 @@ color: inherit;
 }
 
 .sorting{
-    width: 1057px;
+    width: 1200px;
     margin: 0 auto;
-    text-align: center;
-    display: flex;
+    /* text-align: center; */
+    /* display: flex; */
 }
 .products{
     width: 1057px;
     margin-left: 110px;
     
+}
+
+.button-items{
+    display:flex;
+    flex-direction: column;
+
+}
+.list{
+    display: flex;
 }
 .button-reset{
 font-size: 18px;
@@ -446,7 +454,27 @@ font-size: 30px;
 line-height: 39px
 }
 
+.sorting-container{
+display:flex;
+margin-bottom: 16px;
+padding: 16px; 
+color: #000000;
+background-color: #ffffff;
+justify-content: space-around;
+}
+
+.list-presentation{
+    width: 48px;
+    height: 48px;
+    border: 2px solid #000000;
+border-radius: 4px;
+}
+
 .select-control{
+    width: 287px;;
+    height: 48px;
+    border: 2px solid #E6E6E6;
+    border-radius: 4px;
     font-size: 18px;
     line-height: 23,29px;
     font-weight: 400;
@@ -504,6 +532,7 @@ line-height: 39px
 
 .product-list{
     list-style-type: none;
+    margin-bottom: 64px;
 }
 
 .product-card-rating{
@@ -525,15 +554,33 @@ line-height: 39px
     font-weight: 700; 
     border-radius: 4px;
     text-decoration: none;
-    width: 1056px;
+    width: 619px;
+    padding: 19px 200px 19px 200px;
+    margin-top: 64px;
+    
 }
 
 .pagination{
     list-style-type: none;
     display: flex;
+    margin: 0;
+    padding: 0;
+    display:flex;
+    width: 370px;
+    justify-content: space-between;
+}
+
+.pagination-container{
+    width: 1056px;
+    display: flex;
+    justify-content: space-between;
+    margin: 60px auto;
 }
 
 .pagination-link-current{
+    width: 55px;
+    height: 55px;
+    padding: 14px 20px;
     background: #F2F2F2;
     color: #FFFFFF;
     font-size: 20px;
@@ -544,6 +591,9 @@ line-height: 39px
 }
 
 .pagination-link{
+    width: 55px;
+    height: 55px;
+    padding: 14px 20px;
     background: #83B3D3;
     color: #FFFFFF;
     font-size: 20px;
@@ -562,6 +612,9 @@ line-height: 39px
 
 
 .newsletter-inner{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     margin: 0 auto;
     width: 800px ;
     text-align: center;
@@ -595,6 +648,7 @@ line-height: 39px
 }
 
 .newsletter-field{
+    width: 600px;
     background: #F2F2F2;
     border-radius: 0px 10px 10px 0px;
     font-size: 18px;
@@ -611,6 +665,10 @@ line-height: 39px
 }
 
 .field{
+    padding: 
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 400;
     width: 600px;
     height: 60px;
     margin-right: 0;
