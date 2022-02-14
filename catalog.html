@@ -58,7 +58,7 @@
           <h2 class="visually-hidden">Применяемые фильтры</h2>
           <div class="catalog-products">
             <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
-                <div class="catalog-filter-group">
+              <div class="catalog-filter-group">
                     <div class="catalog-filter-title">Инфраструктура</div>
                     <ul class="catalog-filter-list">
                         <li class="catalog-filter-item">
@@ -78,8 +78,8 @@
                               <label class="control"  for="WiFI"></label>
                         </li>
                     </ul>
-                  </div>
-                <div class="catalog-filter-group">
+              </div>
+              <div class="catalog-filter-group">
                     <div class="catalog-filter-title">Тип жилья</div>
                     <ul class="catalog-filter-list">
                         <li class="catalog-filter-item">
@@ -95,33 +95,40 @@
                               <label class="control" for="Apartments"></label>
                         </li>
                     </ul>
+              </div>
+            
+                  <div class="catalog-filter-price">
+                    <div class="catalog-filter-title">Стоимость, Р:</div>
                   </div>
-                <div class="catalog-filter-price">
-                  <div class="catalog-filter-title">Стоимость, Р:</div>
+              
+
+                <div class="button-items">
+                  <button class="button-apply" type="submit">Применить</button>
+                  <button class="button-reset" type="reset">Сбросить</button>
                 </div>
-                <button class="button-apply" type="submit">Применить</button>
-                <button class="button-reset" type="reset">Сбросить</button>
             </form>
             </div>
           </section>
           <section class="sorting">
-            <form>
-              <span class="catalog-filter-result">Найдено гостиниц:</span>
-              <select class="select-control" aria-label="Сортировка" name="Сортировка">
-                <option value="cheap">Сначала дешёвые</option>
-                <option value="popular">Сначала популярные</option>
-                <option value="expensive">Сначала дорогие</option>
-              </select>
-            </form>
-            <a class="list-presentation" href="#">
-                <span class="visually-hidden">Показать карточки</span>
-            </a>
-            <a class="list-presentation" href="#">
-                <span class="visually-hidden">Показать одну карточку</span>
-            </a>
-            <a class="list-presentation" href="#">
-                <span class="visually-hidden" >Показать список</span>
-            </a>
+              <div class="sorting-container">
+                <span class="catalog-filter-result">Найдено гостиниц:</span>
+                <select class="select-control" aria-label="Сортировка" name="Сортировка">
+                  <option value="cheap">Сначала дешёвые</option>
+                  <option value="popular">Сначала популярные</option>
+                  <option value="expensive">Сначала дорогие</option>
+                </select>
+                <div class="list">
+                <a class="list-presentation" href="#">
+                  <span class="visually-hidden">Показать карточки</span>
+                </a>
+                <a class="list-presentation" href="#">
+                  <span class="visually-hidden">Показать одну карточку</span>
+                </a>
+                <a class="list-presentation" href="#">
+                  <span class="visually-hidden" >Показать список</span>
+                </a>
+                </div>
+              </div>
           </section>
           <section class="products"> 
             <ul class="product-list">
@@ -188,6 +195,7 @@
             </div>
             </section>
             <section>
+              <div class="pagination-container">
               <ul class="pagination">
                 <li class="pagination-item">
                     <a class="pagination-link-current" href="#">1</a>
@@ -216,7 +224,7 @@
                 <option value="cheap">4</option>
                 <option value="popular">8</option>
                 <option value="expensive">16</option>
-            </select>
+              </select>
            </form>
            </div>
           </section>
@@ -226,7 +234,7 @@
           <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
             <input class="newsletter-field" placeholder="Ваш email" type="email" name="newsletter-email">
             <button class="button newsletter-button" type="submit">
-              <span class="">Подписаться</span>
+              Подписаться
             </button>
           </form>
         </section>
