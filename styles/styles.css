@@ -629,11 +629,16 @@ justify-content: space-around;
 }
 
 .pagination-container{
+    
+    margin: auto;
     box-sizing: border-box;
     width: 1056px;
     display: flex;
     justify-content: space-between;
     
+}
+.products{
+    margin-bottom: 30px;
 }
 
 .pagination-link-current{
