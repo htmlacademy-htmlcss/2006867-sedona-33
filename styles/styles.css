@@ -567,8 +567,12 @@ justify-content: space-around;
     border-radius: 4px;
     width: 140px;
 }
-
+.product-star-number{
+    display: flex;
+    align-items: center;
+}
 .product-card-star{
+    align-items: center;
     color: #83B3D3;
     width: 18px;
     height: 17px;
@@ -634,6 +638,7 @@ justify-content: space-around;
     box-sizing: border-box;
     width: 1056px;
     display: flex;
+    align-items: center;
     justify-content: space-between;
     
 }
@@ -641,23 +646,12 @@ justify-content: space-around;
     margin-bottom: 30px;
 }
 
-.pagination-link-current{
-    box-sizing: border-box;
-    width: 55px;
-    height: 55px;
-    padding: 14px 20px;
-    background: #F2F2F2;
-    color: #FFFFFF;
-    font-size: 20px;
-    line-height: 25px;
-    font-weight: 700; 
-    border-radius: 4px;
-    text-decoration: none; 
-}
+
 
 
 
 .pagination-link{
+    display:block;
     box-sizing: border-box;
     width: 55px;
     height: 55px;
@@ -669,6 +663,22 @@ justify-content: space-around;
     font-weight: 700; 
     border-radius: 4px;
     text-decoration: none; 
+}
+
+.pagination-link-current{
+    /* display: block;
+    box-sizing: border-box;
+    width: 55px;
+    height: 55px;
+    padding: 14px 20px; */
+    background: #F2F2F2;
+    color:#000000;
+    /* color: #FFFFFF;
+    font-size: 20px;
+    line-height: 25px;
+    font-weight: 700; 
+    border-radius: 4px;
+    text-decoration: none;  */
 }
 
 .product-count{
