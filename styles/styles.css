@@ -542,7 +542,16 @@ height: 16px;
 
 }
 .list{
+    width: 160px;
     display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+
+
+.list-presentation-view{
+    margin-top:17px;
 }
 .button-reset{
 font-size: 18px;
