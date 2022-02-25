@@ -177,6 +177,7 @@ color: inherit;
     text-align: center;
 }
 
+
 .advantages-title{
     margin:0px;
     padding:0px;
@@ -419,6 +420,7 @@ margin: 0px;
 padding: 0px;
 width: 16px;
 height: 16px;
+padding-top:10px;
   
 }
 .footer-social-list{
@@ -516,13 +518,32 @@ height: 16px;
 }
 
 .button-apply{
+    border:none;
     font-size: 16px;
     line-height: 21px;
     color: #FFFFFF;
     font-weight: 700;
     background-color: #83B3D3; 
     border-radius: 4px;
+    padding: 14px 34px;
 }
+
+.button-apply:hover{
+    background: #68A2CA;
+}
+
+
+.button-apply:focus{
+border: 3px solid #FFFFFF;
+background: #68A2CA;
+
+}
+
+.button-apply:active{
+  
+    background: #68A2CA;
+    opacity: 0.3;
+    }
 
 .sorting{
     width: 1200px;
@@ -554,12 +575,29 @@ height: 16px;
     margin-top:17px;
 }
 .button-reset{
+margin-top:20px;
+border-radius: 4px;
+padding:14px 34px;
 font-size: 18px;
 line-height: 23px;
 text-align: center;
 font-weight: 400;
+border:none;
+background-color: transparent;
+color:#FFFFFF;
 }
 
+.button-reset:hover{
+    opacity: 0.6
+}
+.button-reset:focus{
+border: 3px solid #83B3D3;
+border-radius: 4px;
+}
+
+.button-reset:active{
+    opacity: 0.3;
+}
 .catalog-filter-result{
 color:#000000;
 font-weight: 700;
@@ -579,8 +617,20 @@ justify-content: space-around;
 .list-presentation{
     width: 48px;
     height: 48px;
-    border: 2px solid #000000;
+    border: 2px solid #E6E6E6;
     border-radius: 4px;
+}
+
+.list-presentation:hover{
+    border: 2px solid #83B3D3;
+}
+
+.list-presentation:focus{
+    border: 2px solid #83B3D3;
+}
+
+.list-presentation:active{
+    border: 2px solid #000000;
 }
 
 .select-control{
