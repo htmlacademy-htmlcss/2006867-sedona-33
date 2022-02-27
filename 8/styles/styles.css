@@ -2,7 +2,7 @@
     font-family: "PT Sans";
     font-style: normal;
     font-weight: 400;
-    src: url("fonts/pt-sans-regular.woff2") format("woff2");
+    src: url("../fonts/pt-sans-regular.woff2") format("woff2");
     font-display: swap;
   }
 
@@ -10,13 +10,16 @@
     font-family: "PT Sans";
     font-style: normal;
     font-weight: 700;
-    src: url("fonts/pt-sans-bold.woff2") format("woff2");
+    src: url("../fonts/pt-sans-bold.woff2") format("woff2");
     font-display: swap;
   }
 
 
 html {
+    
+    width: 100%;
     height: 100%;
+    background-color: E5E5E5;
 }
 
 body {
@@ -35,6 +38,7 @@ body {
 .navigation-logo {
     width: 139px;
     margin-right: 30px;
+    z-index:2;
   }
 .navigation-list{
     display: flex;
@@ -60,15 +64,22 @@ color: inherit;
     color: #756257;
   }
 
-.navigation-link:focus {
-   color: #000000;
-   text-transform: uppercase;
+.navigation-link-current::before {
+    position: absolute;
+    right: 20px;
+    bottom: 0;
+    left: 20px;
+    height: 2px;
+    background-color: #000000;
+    content: "";
   }
-
-
 .navigation-user {
+    display: flex;
+    justify-content: flex-end;
     max-width: 300px;
     margin-left: auto;
+
+
   }
   .navigation-user .navigation-link {
     min-width: 20px;
@@ -87,16 +98,45 @@ color: inherit;
 
   .navigation-icon {
     position: absolute;
-    top: 0;
+    top: 10px;
     right: 0;
     bottom: 0;
     left: 0;
     margin: auto;
+    fill:#000000;
     
   }
+
+  .navigation-link:hover .navigation-icon{
+  
+    fill:#756257;
+}
+
+.navigation-link:active .navigation-icon{
+  
+    opacity: 0.3;
+}
+
+  .favorite{
+    margin-right: 20px;
+    margin-top:-9px;
+  }
+
+  .greencolorofsvg{
+      fill: #7DB54F;
+  }
+
+  .whitecolorofsvg{
+
+    fill: #ffffff;
+  }
+
+
+
 .navigation-item-buttom{
+    box-sizing: border-box;
     display: block;
-    padding: 9px 15px;
+    padding: 9px 34px 9px 34px;
     text-decoration: none;
     color: #ffffff;
     font-size: 16px;
@@ -107,7 +147,7 @@ color: inherit;
     width: 160px;
     border-radius: 4px;
     text-transform: uppercase;
-    margin-top:13px;
+    margin-top:13.72px;
 }
 
 .navigation-item-buttom:hover{
@@ -116,6 +156,7 @@ color: inherit;
 
 
 .main-container {
+    margin-top:-10px;
     padding-top:0px;
     flex-grow: 1;
     
@@ -125,6 +166,7 @@ color: inherit;
     display: flex;
     width: 1060px;
     margin: 0 auto;
+    
   }
 
 .page-container {
@@ -154,6 +196,8 @@ color: inherit;
 
 .advantages-list{
     list-style-type: none;
+    margin:0;
+    margin-top: 80px;
     padding:0;
     display:flex;
     flex-wrap:wrap;
@@ -171,6 +215,7 @@ color: inherit;
 .main-index-title{
     margin:0px;
     padding:0px;
+    margin-top: 63px;
     font-size: 30px;
     line-height: 36px;
     text-transform: uppercase;
@@ -181,6 +226,7 @@ color: inherit;
 .advantages-title{
     margin:0px;
     padding:0px;
+    margin-top: 31px;;
     color: #333333;
     font-size: 22px;
     line-height: 36px;
@@ -196,7 +242,7 @@ color: inherit;
     padding:20px;
     min-height: 344px;
     flex-direction: column;
-    justify-content: center;
+    
     
     
 }
@@ -208,9 +254,10 @@ color: inherit;
 }
 
 .advantages-box-blue{
+    
     display:flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
     color:#FFFFFF;
     background: #83B3D3;
     width: 360px;
@@ -232,26 +279,41 @@ color: inherit;
     line-height: 28px;
     font-weight: 700;
     text-align: center;
+    text-transform: uppercase;
+    margin-top: 77px;
+    
     
 }
 
 
 
 .advantages-description{
-
+    margin:0px;
+    display: block;
     font-weight: 400;
     text-align: center;
+    margin-top:30px;
+    font-size:18px;
+    line-height: 21px;
+
     
 }
 .advantages-logo{
     color:#81B3D2;
     display: block;
     margin: 0 auto;
+    margin-top:69px;
 }
 
 .advantages-detail-title{
-    
+    margin:0px;
+    margin-top:23px;
     text-align: center;
+    text-transform: uppercase;
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 700;
+
     
 }
 
@@ -260,7 +322,8 @@ color: inherit;
     line-height: 21px;
     font-weight: 400;
     width: 250px;
-    margin: 20px auto;
+  margin:0px auto;
+  margin-top:20px;
     text-align: center;
 }
 
@@ -278,6 +341,7 @@ color: inherit;
     width: 720px;
     margin: 0px auto 29px auto;
     text-align: center;
+    text-transform: uppercase;
     
 }
 
@@ -287,7 +351,10 @@ color: inherit;
     line-height: 26px;
     font-weight: 400;
     text-align: center;
+    margin:0 auto;
     margin-bottom: 56px;
+    width: 720px;
+    
 
 }
 .proposal-search{
@@ -297,6 +364,8 @@ color: inherit;
     text-align: center;
     display:block;
     margin: 0 auto;
+    padding: 15px auto 15px auto;
+
     
 }
 .button-search{
@@ -311,7 +380,8 @@ color: inherit;
     text-decoration: none;
     margin: 0 auto;
     text-align: center;
-    padding:15px 0 15px 0;
+    padding:15px 0 10px 0;
+    text-transform: uppercase;
 }
 
 .button-search:hover{
@@ -343,21 +413,29 @@ color: inherit;
     width: 1200px;
     height: 411px;
     margin: 0 auto;
+    
 }
 .newsletter-form{
     display:flex;
     width: 800px;
     text-align: center;
     margin: 0 auto;
+    margin-top: 46px;
 }
 
 .newsletter-title{
-    
+    margin:0px;
+    padding:0px;
     text-align: center;
+    text-transform: uppercase;
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 700;
 }
 
 .footer-contacts-phone{
-    
+    margin: 0px;
+    padding: 0px;;
     display: block;
     font-size: 40px;
     line-height: 40px;
@@ -365,6 +443,8 @@ color: inherit;
     text-align: center;
     color: inherit;
     text-decoration: none;
+    margin-left:8px;
+    
 }
 
 .footer-contacts-phone:hover{
@@ -410,43 +490,53 @@ color: inherit;
 }
 
 .footer-social{
+    box-sizing: border-box;
     margin:0;
-    padding:0;
+    padding-top: 7px;
     width: 107px;
+ 
 }
 
 .footer-social-item{
+   
 margin: 0px;
 padding: 0px;
-width: 16px;
-height: 16px;
-padding-top:10px;
+
+
   
 }
 .footer-social-list{
     list-style-type: none;
     display:flex;
-    justify-content: space-around;
+    justify-content: space-between;
     padding:0px;
     margin:0px;
 }
 
-.link-tw{
-    background-image: url("../images/twitter.svg");
-    background-repeat: no-repeat;
+
+.social:hover .social-logo{
+fill: #68A2CA;
 }
 
-.link-youtube{
-    background-image: url("../images/youtube.svg");
-    background-repeat: no-repeat;
+.social-logo{
+    fill:#83B3D3;
+}
+.social:focus .social-logo{
+    fill: #68A2CA;
+    border: 3px solid #83B3D3;
+    border-radius: 10px;
+    padding:2px;
 }
 
-.link-fb{
-    background-image: url("../images/facebook.svg");
-    background-repeat: no-repeat;
+.social:active .social-logo{
+    
+    fill: #68A2CA;
+    opacity: 0.3;
 }
+
 .footer-contacts{
     max-width: 720px;
+    
 }
 
 .developer-logo:hover .academy-logo{
@@ -857,16 +947,17 @@ justify-content: space-around;
 }
 
 .newsletter-button{
-    outline: none;
+    
+    border:none;
     background: #83B3D3;
     width: 200px;
     padding: 18px 34px 16px 34px;
     color: #FFFFFF;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 26px;
     font-weight: 700; 
     border-radius: 0px 10px 10px 0px;
-    text-decoration: none; 
+    text-transform: uppercase;
 }
 
 .newsletter-button:hover{
@@ -899,7 +990,12 @@ justify-content: space-around;
     display: block;
     width: 720px;
     margin: 0 auto;
-    
+    margin-top: 29px;
+    text-align: center;
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: 400;
+
     
 }
 
@@ -914,9 +1010,9 @@ justify-content: space-around;
     font-weight: 400;
     width: 600px;
     height: 60px;
-    margin-right: 0;
+    border:none;
     border-radius: 0px 10px 10px 0px;
-    /* transform: matrix(-1, 0, 0, 1, 0, 0); */
+    transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 .field:hover{
     background: #E6E6E6;
@@ -926,8 +1022,17 @@ justify-content: space-around;
     background: #E6E6E6;
     outline: 3px solid #83B3D3;
     border-radius: 0px 10px 10px 0px;
-    /* transform: matrix(-1, 0, 0, 1, 0, 0); */
+    transform: matrix(-1, 0, 0, 1, 0, 0);
 }
+
+.field::placeholder{
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+    margin-left: 22px;
+    font-size: 17px;
+    line-height: 26px;
+    font-weight: 400;
+
+  }
 .product-wrapper{
     display:flex;
     width: 299px;
