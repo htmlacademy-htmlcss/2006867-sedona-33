@@ -2,7 +2,7 @@
     font-family: "PT Sans";
     font-style: normal;
     font-weight: 400;
-    src: url("../fonts/pt-sans-regular.woff2") format("woff2");
+    src: url("../fonts/ptsans-400.woff2") format("woff2");
     font-display: swap;
   }
 
@@ -10,7 +10,7 @@
     font-family: "PT Sans";
     font-style: normal;
     font-weight: 700;
-    src: url("../fonts/pt-sans-bold.woff2") format("woff2");
+    src: url("../fonts/ptsans-700.woff2") format("woff2");
     font-display: swap;
   }
 
@@ -19,7 +19,7 @@ html {
     
     width: 100%;
     height: 100%;
-    background-color: E5E5E5;
+    background-color: #E5E5E5;
 }
 
 body {
@@ -62,6 +62,10 @@ color: inherit;
 
 .navigation-link:hover {
     color: #756257;
+  }
+
+  .navigation-link:active {
+    color: rgba(117, 98, 87, 0.3);
   }
 
 .navigation-link-current::before {
@@ -154,7 +158,10 @@ color: inherit;
     background-color: #615048;
 }
 
-
+.navigation-item-buttom:active{
+    background-color: #615048;
+    color: rgba(117, 98, 87, 0.3);
+}
 .main-container {
     margin-top:-10px;
     padding-top:0px;
@@ -210,6 +217,7 @@ color: inherit;
     display: flex;
     margin:0;
     padding: 0;
+    flex-wrap: wrap;
 }
 
 .main-index-title{
@@ -403,6 +411,7 @@ color: inherit;
     opacity: 0.3;
 }
 .newsletter{
+    box-sizing: border-box;
     display:flex;
     flex-direction: column;
     justify-content: center;
@@ -411,8 +420,9 @@ color: inherit;
     background-color: #000000;
     background-size: 100% auto;
     width: 1200px;
-    height: 411px;
+    min-height: 411px;
     margin: 0 auto;
+    
     
 }
 .newsletter-form{
@@ -512,7 +522,9 @@ padding: 0px;
     padding:0px;
     margin:0px;
 }
-
+.social{
+    min-height: 15px;
+}
 
 .social:hover .social-logo{
 fill: #68A2CA;
@@ -549,6 +561,7 @@ fill: #68A2CA;
 }
 
 .catalog-header{
+    box-sizing: border-box;
     background-image: url("../images/background-catalog1.jpg");
     color: #ffffff;
     background-color: #000000;
@@ -556,38 +569,69 @@ fill: #68A2CA;
     Width: 1200px;
     Height: 408px;
     margin: 0 auto;
+    padding:35px 72px 83px 71px;
 
 }
 
 .inner-header-title{
-    
-    margin-left: 71px;
+    margin:0px;
+    padding:0px;
     font-size: 60px;
     line-height: 77px;
     font-weight: 700;
-    text-align: center;
+    
 }
 
 .breadcrumbs{
     list-style-type: none;
     display: flex;
+    margin:0px;
+    padding:0px;
+    /* margin-left: 51px; */
+
 }
+.breadcrumbs-item {
+    position: relative;
+    margin-right: 32px;
+}
+
 .breadcrumbs-link{
     font-size: 16px;
     line-height: 20px;
     font-weight: 400;
     text-align: center;
     text-decoration: none;
-    color: inherit
+    color: inherit;
+    
 }
 
+.breadcrumbs-item::after {
+    position: absolute;
+    top: 0px;
+    right: -20px;
+    content:url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='8' width='5'><path d='M4.79998 3.60005L0.999984 0.200049C0.799984 4.88311e-05 0.399984 4.88311e-05 0.0999836 0.200049C-0.200016 0.400049 -0.100016 0.800049 0.0999836 1.00005L3.39998 4.00005L0.199984 7.00005C-1.63764e-05 7.20005 -1.63764e-05 7.60005 0.199984 7.80005C0.199984 7.90005 0.499984 8.00005 0.599984 8.00005C0.699984 8.00005 0.899984 7.90005 0.999984 7.80005L4.79998 4.40005C5.09998 4.20005 5.09998 3.80005 4.79998 3.60005Z' fill='white'/></svg>");
+    
+  }
+
+  .breadcrumbs-item:last-child::after {
+    content: none;
+  }
 .catalog-filter{
     display:flex;
-    justify-content: space-around;
+    margin-top: 45px;
 }
 
+.catalog-filter-group:nth-child(1){
+    margin-right: 67px;
+}
 
+.catalog-filter-group:nth-child(2){
+    margin-right: 167px;
+}
 .catalog-filter-title {
+    margin: 0px;
+    padding:0px;
+    margin-bottom: 30px;
     font-size: 20px;
     line-height: 25px;
     font-weight: 700;
@@ -596,17 +640,23 @@ fill: #68A2CA;
 
 .catalog-filter-list{
     list-style-type: none;
-    margin-left: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
 } 
 
 .catalog-filter-item{
+   
     font-size: 18px;
     line-height: 23px;
     font-weight: 400;
+    margin-bottom: 13px;
     
 }
 
+.catalog-filter-price{
+    margin-right: 81px;
+
+}
 .button-apply{
     border:none;
     font-size: 16px;
@@ -638,6 +688,7 @@ background: #68A2CA;
 .sorting{
     width: 1200px;
     margin: 0 auto;
+    margin-top:43px;
     /* text-align: center; */
     /* display: flex; */
 }
@@ -689,6 +740,7 @@ border-radius: 4px;
     opacity: 0.3;
 }
 .catalog-filter-result{
+margin:0px;
 color:#000000;
 font-weight: 700;
 font-size: 30px;
@@ -698,7 +750,6 @@ line-height: 39px
 .sorting-container{
 display:flex;
 margin-bottom: 16px;
-padding: 16px; 
 color: #000000;
 background-color: #ffffff;
 justify-content: space-around;
@@ -947,13 +998,14 @@ justify-content: space-around;
 }
 
 .newsletter-button{
-    
+    font-family: "PT Sans";
+    font-style: normal;
     border:none;
     background: #83B3D3;
     width: 200px;
     padding: 18px 34px 16px 34px;
     color: #FFFFFF;
-    font-size: 18px;
+    font-size:20px;
     line-height: 26px;
     font-weight: 700; 
     border-radius: 0px 10px 10px 0px;
@@ -967,14 +1019,14 @@ justify-content: space-around;
 
 .newsletter-button:focus{
     background-color: #68A2CA;
-    border: 3px solid #756257;
+    outline: 3px solid #756257;
     border-radius: 0px 10px 10px 0px;
 }
 
 .newsletter-button:active{
     background-color: #68A2CA;
-    color: #FFFFFF;
-    opacity: 0.3;
+    color: rgba(255, 255, 255, 0.3);
+    
 }
 
 .newsletter-field{
@@ -1011,28 +1063,35 @@ justify-content: space-around;
     width: 600px;
     height: 60px;
     border:none;
-    border-radius: 0px 10px 10px 0px;
-    transform: matrix(-1, 0, 0, 1, 0, 0);
+    padding-left: 22px;
+    border-radius: 10px 0px 0px 10px;
+    
 }
 .field:hover{
     background: #E6E6E6;
+    
 }
 
 .field:focus{
     background: #E6E6E6;
     outline: 3px solid #83B3D3;
-    border-radius: 0px 10px 10px 0px;
-    transform: matrix(-1, 0, 0, 1, 0, 0);
+    border-radius: 10px 0px 0px 10px;
+
+    
 }
 
 .field::placeholder{
-    transform: matrix(-1, 0, 0, 1, 0, 0);
-    margin-left: 22px;
-    font-size: 17px;
+    font-family: "PT Sans";
+    font-style: normal;
+    font-size: 18px;
     line-height: 26px;
     font-weight: 400;
-
   }
+
+.field-error{
+    outline: 2px solid #FF5757;
+}
+
 .product-wrapper{
     display:flex;
     width: 299px;
