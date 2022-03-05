@@ -75,20 +75,25 @@
                     <div class="catalog-filter-title">Инфраструктура:</div>
                       <ul class="catalog-filter-list">
                         <li class="catalog-filter-item">
-                            <input class="control-input" type="checkbox" name="Swimpool" id="Swim" checked>
-                            Бассейн
-                            <label class="control" for="Swim">
-                           </label>
+                          <label class="control" for="Swim">
+                            <input class="visually-hidden control-input" type="checkbox" name="Swimpool" id="Swim" checked>
+                            <span class="control-mark"></span>
+                            <span class="control-label">Бассейн</span>
+                          </label>
                         </li>
                         <li class="catalog-filter-item">
-                              <input class="control-input" type="checkbox" name="Parking" id="Parking" checked>
-                              Парковка
-                              <label class="control" for="Parking"></label>
+                          <label class="control" for="Parking">
+                              <input class="visually-hidden control-input" type="checkbox" name="Parking" id="Parking" checked>
+                              <span class="control-mark"></span>
+                              <span class="control-label">Парковка</span>
+                             </label>
                         </li>
                         <li class="catalog-filter-item">
-                              <input class="control-input" type="checkbox" name="Wi-Fi" id="WiFI">
-                              Wi-Fi
-                              <label class="control"  for="WiFI"></label>
+                          <label class="control"  for="WiFI">
+                              <input class="visually-hidden control-input" type="checkbox" name="Wi-Fi" id="WiFI">
+                              <span class="control-mark"></span>
+                              <span class="control-label">Wi-Fi</span>
+                              </label>
                         </li>
                      </ul>
                    </div>
@@ -96,23 +101,57 @@
                     <div class="catalog-filter-title">Тип жилья:</div>
                     <ul class="catalog-filter-list">
                         <li class="catalog-filter-item">
-                            <input class="control-input" type="radio" name="product-group" value="Hotel" id="Hotel" checked>Гостиница
-                            <label class="control" for="Hostel"></label>
+                          <label class="control" for="Hostel">
+                            <input class="visually-hidden control-input" type="radio" name="product-group" value="Hostel" id="Hotel" checked>
+                            <span class="control-mark"></span>
+                            <span class="control-label">Гостиница</span>
+
+                          </label>
                         </li>
                         <li class="catalog-filter-item"> 
-                              <input class="control-input" type="radio" name="product-group" value="Motel" id="Motel">Мотель
-                              <label class="control" for="Motel"></label>
+                          <label class="control" for="Motel">
+                              <input class="visually-hidden control-input" type="radio" name="product-group" value="Motel" id="Motel">
+                              <span class="control-mark"></span>      
+                              <span class="control-label">Мотель</span>
+                             </label>
                         </li>
                         <li class="catalog-filter-item">
-                              <input class="control-input" type="radio" name="product-group" value="Apartments" id="Apartments">Апартаменты
-                              <label class="control" for="Apartments"></label>
+                          <label class="control" for="Apartments">
+                              <input class="visually-hidden control-input" type="radio" name="product-group" value="Apartments" id="Apartments">
+                              <span class="control-mark"></span>    
+                              <span class="control-label">Апартаменты</span>
+                              </label>
                         </li>
                     </ul>
               </div>
             
                   <div class="catalog-filter-price">
                     <div class="catalog-filter-title">Стоимость, ₽ </div>
+                    <div class="range">
+                      <div class="range-scale">
+                        <div class="range-bar">
+                          <button class="range-toggle toggle-min">
+                            <span class="visually-hidden">Изменить минимальную цену.</span>
+                          </button>
+                          <button class="range-toggle toggle-max">
+                            <span class="visually-hidden">Изменить максимальную цену.</span>
+                          </button>
+                        </div>
+                      </div>
+      
+                      <div class="range-wrapper-inputs">
+                        <span class="input-control">
+                        <input class="range-input" type="number" value="0" name="min-price" id="min-price"> 
+                        <label for="min-price" class="catalog-filter-label">от </label>
+                      </span>
+                      <span class="input-control">
+                        <input class="range-input" type="number" value="9000" name="max-price" id="max-price"> 
+                        <label for="max-price" class="catalog-filter-label">до </label>
+                      </span>
+                    </div>
                   </div>
+                </div>
+
               
 
                 <div class="button-items">
