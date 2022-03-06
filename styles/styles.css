@@ -466,7 +466,7 @@ color: inherit;
 
 .footer-contacts-phone:focus{
     color: #756257;
-    border: 3px solid #83B3D3;
+    outline: 3px solid #83B3D3;
     box-sizing: border-box;
     border-radius: 10px;
 
@@ -494,18 +494,19 @@ color: inherit;
     background: rgba(131, 179, 211, 0.2);
     
 } 
+
+
 .page-footer-container{
     justify-content: space-between;
     display: flex;
-    width: 1060px;
-    margin: 40px auto;
+    width: 1068px;
+    margin:38px auto;
 }
 
 .footer-social{
     box-sizing: border-box;
     margin:0;
-    padding-top: 7px;
-    width: 107px;
+    width: 119px;
  
 }
 
@@ -527,7 +528,7 @@ padding: 0px;
 .social{
     box-sizing: border-box;
     min-height: 15px;
-    padding:7px;
+    
 
 }
 
@@ -537,6 +538,7 @@ fill: #68A2CA;
 
 .social-logo{
     fill:#83B3D3;
+    padding:7px;
 }
 .social:focus .social-logo{
     
@@ -556,13 +558,15 @@ fill: #68A2CA;
     max-width: 720px;
     
 }
-
+.academy-logo{
+    padding:5px;
+}
 .developer-logo:hover .academy-logo{
     fill:#756257;
 }
 
 .developer-logo:focus .academy-logo{
-    border: 3px solid #83B3D3;
+    outline: 3px solid #83B3D3;
     border-radius: 10px;
 }
 
@@ -675,13 +679,16 @@ fill: #68A2CA;
     
     margin: 0px;
     padding:0px;
-    margin-bottom: 30px;
+    margin-bottom: 32px;
     font-size: 20px;
     line-height: 25px;
     font-weight: 700;
    
 }
 
+.catalog-filter-price .catalog-filter-title{
+    margin-bottom: 36px;
+}
 
 
 .catalog-filter-list{
@@ -740,7 +747,7 @@ background: #68A2CA;
 .sorting{
     width: 1057px;
     margin: 0 auto;
-    margin-top:44px;
+    margin-top:47px;
     /* text-align: center; */
     /* display: flex; */
 }
@@ -748,7 +755,7 @@ background: #68A2CA;
     
     width: 1057px;
     margin:0 auto;
-    margin-top: 53px;
+    margin-top: 49px;
     
 }
 .select{
@@ -1116,7 +1123,9 @@ margin-left:7px;
 
 
 .pagination-link{
-    display:block;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
     box-sizing: border-box;
     width: 55px;
     height: 55px;
@@ -1302,10 +1311,10 @@ margin-left:7px;
     background-color: #ffffff;
 }
 
-.modal-auth {
+.modal-search{
     width: 715px;
     box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.15);
-border-radius: 30px;
+    border-radius: 30px;
   }
 
   .modal-close-button {
@@ -1324,6 +1333,19 @@ border-radius: 30px;
     cursor: pointer;
   } 
 
+  .modal-close-button:hover{
+    background-color: #E6E6E6;
+  }
+
+  .modal-close-button:focus{
+    background-color: #E6E6E6;
+    outline:3px solid #83B3D3;
+  }
+
+  .modal-close-button:active{
+    background-color: #E6E6E6;
+    background-image: ;
+  }
   .modal-title{
     margin: 0;
     font-family: "PT Sans", sans-serif;
@@ -1335,11 +1357,8 @@ border-radius: 30px;
     margin-bottom: 32px;
   }
 
-  .field-group{
-      margin:0px;
-      padding:0px;
-     
-  }
+
+  
 
   .modal-label{
       position: relative;
@@ -1380,7 +1399,9 @@ border-radius: 30px;
     color:#000000;
 }
   .input-number{
-    
+      box-sizing: border-box;
+  padding-left:55px;
+    position: relative;
     font-size: 18px;
     line-height: 40px;
     font-weight: 700;
@@ -1397,6 +1418,20 @@ border-radius: 30px;
   margin: 0;
 }
 
+.reduce{
+    position:absolute;
+    left:225px;
+    color:black;
+    border:none;
+    font-size: 18px;
+}
+
+.increase{
+    position: absolute;
+    color:#000000;
+    border:none;
+    font-size: 18px;
+}
 .input-date:hover, .input-number:hover{
 background-color: #E6E6E6;
 }
@@ -1417,9 +1452,12 @@ background-color: #E6E6E6;
   }
 
   .field-group{
+      margin:0;
+      padding:0;
       position: relative;
       display: flex;
       justify-content: space-between;
+     
   }
 
   .search-form-button{
@@ -1451,27 +1489,48 @@ background-color: #E6E6E6;
   /* .modal-container-close{
       display:none;
   } */
-.children{
-    position: relative;
+
+  .count{
+      display: flex;
+      justify-content: space-between;
+  }
+.additional1{
+    display: flex;
+    justify-content: space-between;
+
+    width: 288px;
+}
+.additional2{
+    display: flex;
+    justify-content: space-between;
+    width: 230px;
+}
+.additional-info{
+    display: inline;
+    position:relative;
+    width: 25px;
+    height: 25px;
 }
 
-.modal-label:nth-child(4)::after{
-   
-    position: absolute;
-    content:"i";
+.children-info{
     color: #ffffff;
     width: 25px;
     height: 25px;
     background-color: #83B3D3;
-    border-radius: 50%;
+    border:none;
+    border-radius: 50%; 
+    margin-top: 5px;
 }
-  .popover{
-    top:367px; 
-    right: 70px;
+
+.popup{
+    position: absolute;
     box-sizing: border-box;
     padding: 15px 18px 18px 22px;
     width: 256px;
     position:absolute;
+    left:-113px;
+    top:54px;
+    
     z-index: 1;
     background-color: #333333;
     box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
@@ -1479,15 +1538,20 @@ background-color: #E6E6E6;
     font-size: 16px;
     line-height: 20px;
     color: #ffffff;
-  }
+}
+
+.range{
+    margin-top: 29px;
+    margin-left:10px;
+}
+  
 
   .range-scale {
+   
     position: relative;
-    width: 287px;
+    width: 278px;
     height: 4px;
-    margin-bottom: 32px;
     background-color: #000000;
-    
     border-radius: 2px;
   }
 
@@ -1496,7 +1560,7 @@ background-color: #E6E6E6;
   
     position: absolute;
     left: 0px; 
-    width: 227px;
+    width: 220px;
     height: 4px;
     background-color: #ffffff;
   }
@@ -1528,11 +1592,11 @@ background-color: #E6E6E6;
   
 
   .range-input{
-      box-sizing: border-box;
+    box-sizing: border-box;
     height: 48px;
     width: 143px;
     border: 2px solid #ffffff;
-    border-radius: 0px 4px 4px 0px;
+    border-radius: 4px 0px 0px 4px;
     background-color: transparent;
     font-family:"PT Sans", sans-serif; 
     font-size: 18px;
@@ -1540,8 +1604,7 @@ background-color: #E6E6E6;
     font-weight: 400;
     color:#ffffff;
     appearance: textfield;
-   padding-left: 5px;
-
+    padding-left: 14px;
   }
 
 .range-input::-webkit-outer-spin-button,
@@ -1551,8 +1614,9 @@ background-color: #E6E6E6;
 }
 
 
-  .range-input:nth-child(1){
-    border-radius: 4px 0px 0px 4px;
+ .max{
+    border-radius: 0px 4px 4px 0px;
+    border-left:none;
   }  
 
   .range-input:hover{
@@ -1597,7 +1661,8 @@ background-color: #E6E6E6;
   .control-label{
       font-weight: 400;
       font-size: 18px;
-line-height: 23px;
+    line-height: 23px;
+    margin-left: 4px;
 
   }
   /* Mark */
