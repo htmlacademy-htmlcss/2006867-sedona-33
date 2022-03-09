@@ -158,9 +158,18 @@ color: inherit;
     background-color: #615048;
 }
 
+.navigation-item-buttom:focus{
+    background-color: #615048;
+    outline: 3px solid #83B3D3;
+}
+
 .navigation-item-buttom:active{
     background-color: #615048;
     color: rgba(117, 98, 87, 0.3);
+}
+
+.navigation-item-buttom-current{
+    
 }
 .main-container {
     margin-top:-10px;
@@ -579,7 +588,7 @@ fill: #68A2CA;
     Width: 1200px;
     Height: 408px;
     margin: 0 auto;
-    padding:35px 72px 83px 71px;
+    padding:37px 72px 83px 71px;
 
 }
 
@@ -589,7 +598,7 @@ fill: #68A2CA;
     font-size: 60px;
     line-height: 77px;
     font-weight: 700;
-    margin-bottom: -5px;
+    margin-bottom: -7px;
     
 }
 
@@ -603,8 +612,13 @@ fill: #68A2CA;
 }
 
 .home-icon{
+    
+    padding:2px;
     fill:#ffffff;
 }
+
+
+
 
 .breadcrumbs-link:hover .home-icon{
 
@@ -613,7 +627,7 @@ fill: #68A2CA;
 
 .breadcrumbs-link:focus .home-icon{
    
-    padding:6px 8px;
+  
     outline: 3px solid #83B3D3;
     border-radius: 4px; 
 }
@@ -628,7 +642,7 @@ fill: #68A2CA;
 }
 .breadcrumbs-link:focus{
    
-    padding:6px 8px;
+  
     outline: 3px solid #83B3D3;
     border-radius: 4px; 
 }
@@ -638,10 +652,12 @@ fill: #68A2CA;
 
 .breadcrumbs-item {
     position: relative;
-    margin-right: 28px;
+    margin-right: 24px;
 }
 
 .breadcrumbs-link{
+    box-sizing: border-box;
+    padding-top:4px;
     font-size: 16px;
     line-height: 20px;
     font-weight: 400;
@@ -654,7 +670,8 @@ fill: #68A2CA;
 .breadcrumbs-item::after {
     position: absolute;
     top: 0px;
-    right: -20px;
+    right: -14px;
+    top:-4px;
     opacity:0.3;
     content:url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='8' width='5'><path d='M4.79998 3.60005L0.999984 0.200049C0.799984 4.88311e-05 0.399984 4.88311e-05 0.0999836 0.200049C-0.200016 0.400049 -0.100016 0.800049 0.0999836 1.00005L3.39998 4.00005L0.199984 7.00005C-1.63764e-05 7.20005 -1.63764e-05 7.60005 0.199984 7.80005C0.199984 7.90005 0.499984 8.00005 0.599984 8.00005C0.699984 8.00005 0.899984 7.90005 0.999984 7.80005L4.79998 4.40005C5.09998 4.20005 5.09998 3.80005 4.79998 3.60005Z' fill='white'/></svg>");
     
@@ -800,7 +817,7 @@ color:#FFFFFF;
     opacity: 0.6
 }
 .button-reset:focus{
-border: 3px solid #83B3D3;
+outline: 3px solid #83B3D3;
 border-radius: 4px;
 }
 
@@ -965,6 +982,11 @@ justify-content: space-between;
     outline: 3px solid #83B3D3;
 }
 
+.product-card-button:active{
+    background: #615048;
+    color:rgba(255, 255, 255, 0.3);
+}
+
 .product-favorite{
     display: flex;
     align-items: center;
@@ -994,7 +1016,6 @@ justify-content: space-between;
     outline: 1px solid #756257;
     background: #68A2CA;
     color: rgba(255, 255, 255, 0.3);
-
 }
 
 
@@ -1022,12 +1043,11 @@ justify-content: space-between;
     outline: 3px solid #756257;
     background: #6C9E42;
 }
-
-.product-favorite:active{
-    outline: 1px solid #756257;
+.added-favorite:active{
+    color:rgba(255, 255, 255, 0.3);
     background: #6C9E42;
-    color: rgba(255, 255, 255, 0.3)
 }
+
 .product-star-number{
     display: flex;
     align-items: center;
@@ -1159,7 +1179,10 @@ margin-left:7px;
     background:#68A2CA;
     outline: 3px solid #756257;
 }
-
+.pagination-link-current:hover, .pagination-link-current:focus, .pagination-link-current:active{
+    background: #F2F2F2;
+    color:#000000;
+}
 .product-count{
     color: #333333;
     font-size: 18px;
@@ -1296,11 +1319,12 @@ margin-left:7px;
 .modal-container{
     position: fixed;
     background-color: rgba(242, 242, 242, 0.8);
-    top: 0;
-    left: 0;
     display: flex;
     width: 100%;
     height: 100%;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%, -50%);
 }
 
 .modal{
@@ -1309,12 +1333,17 @@ margin-left:7px;
     margin:auto;
     padding:62px 70px 70px 70px;
     background-color: #ffffff;
+   
+    
 }
 
 .modal-search{
     width: 715px;
     box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.15);
     border-radius: 30px;
+
+
+  
   }
 
   .modal-close-button {
@@ -1370,17 +1399,38 @@ margin-left:7px;
   }
 
   .input-date{
-      font-weight:  "PT Sans", sans-serif;
+      font-family:  "PT Sans", sans-serif;
       font-size: 18px;
     line-height: 40px;
     font-weight: 700;
     box-sizing: border-box;
     min-height:49px;
-    width: 420px;
+    width: 370px;
     background: #F2F2F2;
-    border-radius: 4px;
+    color: #000000;
+    border-radius: 4px 0px 0px 4px;
     border:none;
     padding-left:19px;
+  }
+    .input-date::placeholder{
+    font-family:  "PT Sans", sans-serif;
+    color:#000000;
+    font-size: 18px;
+  }
+
+  .date-logo{
+    cursor: pointer;
+      width: 50px;
+      height: 50px;
+     border:none;
+     background-color: #F2F2F2;;
+     border-radius: 0px 4px 4px 0px;
+      background-image: url(../images/date.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+  }
+  .date-wrapper:hover {
+    background-color: #E6E6E6;
   }
 .error-message{
     width: 420px;
@@ -1411,18 +1461,18 @@ margin-left:7px;
 
 
   .input-number{
-    position: relative;
-    box-sizing: border-box;
-    padding-left:55px;
+   text-align: center;
+   
     font-size: 18px;
     line-height: 40px;
     font-weight: 700;
-    border-radius: 4px;
     border:none;
     background: #F2F2F2;
     color: #000000;
-    width: 133px;
     min-height: 50px;
+    width: 44px;
+    
+    
   }
   .input-number::-webkit-outer-spin-button,
 .input-number::-webkit-inner-spin-button {
@@ -1433,39 +1483,31 @@ margin-left:7px;
 
 
 .reduce{
-    position:absolute;
-    left:240px;
+    width: 44px;
+    min-height: 50px;
     color:rgba(0, 0, 0, 0.3);
     border:none;
+    border-radius: 4px 0px 0px 4px;
     font-size: 22px;
-    background-color: transparent;
+    background: #F2F2F2;
+    cursor: pointer;
 }
 
 
 .increase{
-    
-    position:absolute;
-    background-color: transparent;
-    left:315px;
-    
+    width: 44px;
+ min-height: 50px;
     color:rgba(0, 0, 0, 0.3);
     border:none;
+    border-radius: 0px 4px 0px 4px;
     font-size: 22px;
-}
-.input-date:hover, .input-number:hover{
-background-color: #E6E6E6;
+    background: #F2F2F2;
+    cursor: pointer;
 }
 
-.input-date:focus, .input-number:focus{
-    background-color: #E6E6E6;
-    outline: 3px solid #83B3D3;
-    }
 
 
-.input-date:active, .input-number:active{
-    background-color: #ffffff;
-    outline: 2px solid #000000;
-}
+
 
   .search-form{
       width: 575px;
@@ -1523,10 +1565,12 @@ background-color: #E6E6E6;
     
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 230px;
 }
 .additional-info{
-    display: inline;
+   
+  
     position:relative;
     width: 25px;
     height: 25px;
@@ -1539,7 +1583,7 @@ background-color: #E6E6E6;
     background-color: #83B3D3;
     border:none;
     border-radius: 50%; 
-    margin-top: 8px;
+    
 }
 
 .popup{
@@ -1549,7 +1593,7 @@ background-color: #E6E6E6;
     width: 256px;
     position:absolute;
     left:-113px;
-    top:54px;
+    top:40px;
     z-index: 1;
     background-color: #333333;
     box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
@@ -1702,12 +1746,12 @@ background-color: #E6E6E6;
      content:"";
      left: 6px;
      top:2px;
-  position: absolute;
- width: 5px;
- height: 10px;
- border: 2px solid #3D5F78;
- border-top:none;
- border-left: none;;
+    position: absolute;
+    width: 5px;
+    height: 10px;
+    border: 2px solid #3D5F78;
+    border-top:none;
+    border-left: none;;
   transform:rotate(45deg);
 }
 
@@ -1716,7 +1760,7 @@ background-color: #E6E6E6;
 }
   
   
-  .control:focus  .control-mark {
+  .control:focus + .control-mark {
     outline: 3px solid #83B3D3;
     border-radius: 4px;
     opacity: 0.6;
@@ -1738,4 +1782,22 @@ background-color: #E6E6E6;
     background-color: #3F5E72;
     border-radius: 50%;
     content: "";
+  }
+
+  .input-wrapper{
+      display: flex;
+    
+  }
+
+  .date-wrapper{
+      display: inline;
+      display: flex;
+  }
+
+  .popup::after{
+    content: ''; 
+    position: absolute;
+    right: 122px; top: -20px;
+    border: 8px solid transparent;
+    border-bottom: 12px solid #333333;
   }
