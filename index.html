@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <title>Sedona</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
   </head>
   <body>
     <header class="page-header">
@@ -42,7 +44,7 @@
             </a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-item-buttom" href="#">
+            <a class="navigation-item-buttom navigation-item-buttom-current" href="#">
               <span >Хочу сюда!</span>
             </a>
           </li>
@@ -127,7 +129,8 @@
       <section class="proposal">
         <h2 class="proposal-title">Заинтересовались?</h2>
         <p  class="proposal-information">Укажите предполагаемые даты поездки,</br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>  
-        <a class="button-search" href="#">Поиск гостиницы в Седоне</a>
+        <a class="button-search" href="#">Поиск гостиницы в Седоне</a> 
+        <!-- При нажатии  в классе modal-wrapper display:none убирается -->
       </section>
     </div>
       <section class="newsletter">
@@ -194,5 +197,74 @@
       </secton>
     </div>
     </footer>
+    <div class="modal-wrapper">
+    <div class="modal-container modal-container-close">
+      <div class="modal modal-search">
+        <!-- При нажатии на кнопу закрыть, у класса modal-container-close display:none меняется на display:block-->
+        <button class="modal-close-button" type="button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+        <section class="modal-content">
+          <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+          <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
+           <div>
+              <div class="field-group">
+                <label class="modal-label" for="arrive-date">Дата заезда:</label>
+                 <div class="date-wrapper">
+                    <input class="input-date" type="text" id="arrive-date" name="arrive-date" placeholder="27 апреля 2020">
+                     <button class="date-logo" type="button"></button>
+                </div>
+             </div>
+              <!-- При выборе неверной даты, у класса  error-message убирается display:none -->
+              <span class="error-message">Мы не можем отправить вас в прошлое.</span>
+              </div>
+            <div>
+              <div class="field-group">
+                <label class="modal-label"for="leave-date">Дата выезда:</label>
+                <div class="date-wrapper">
+                  <input class="input-date" type="text" id="leave-date" name="leave-date" placeholder="1 сентября 2021">
+                  <button class="date-logo" type="button"></button>
+                </div>
+              </div>
+
+  
+              <!-- При выборе свободной даты, у класса  info-message убирается display:none -->
+              <span class="info-message">На эти даты есть свободные номера. Пока есть.</span>
+            </div>
+            
+            <div class="count">
+                <div class="additional1">
+                  <label class="modal-label" for="adults">Взрослые:</label>
+                  <div class="input-wrapper">
+                    <button class="reduce">-</button>
+                    <input class="input-number" type="number" id="adults" name="number-adults" placeholder="2">
+                    <button class="increase">+</button>
+                  </div>
+               </div>
+               <div class="additional2">
+                  <label class="modal-label" for="children">Дети:</label>
+                  <div class="additional-info">
+                    <button class="children-info popover-close-button" type="button">i</button>
+                    <span class="visually-hidden">Закрыть</span>
+                    <div class="popup">
+                    Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
+                    </div>
+                  </div>
+                  <div class="input-wrapper">
+                    <button class="reduce">-</button>
+                    <input class="input-number" type="number" id="children" name="number-children" placeholder="1">
+                  
+                  <button class="increase">+</button>
+                  </div>
+                </div>
+             </div> 
+         <div>
+          <button class="search-form-button" type="submit">НАЙТИ</button>
+          </div>
+          </form>
+        </section>
+      </div>
+    </div>
+  </div>
   </body>
 </html>
