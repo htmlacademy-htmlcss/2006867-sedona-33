@@ -1314,7 +1314,7 @@ margin-left:7px;
 }
 
 .field::placeholder{
-    font-family: "PT Sans";
+    font-family: "PT Sans", sans-serif;
     font-style: normal;
     font-size: 18px;
     line-height: 26px;
