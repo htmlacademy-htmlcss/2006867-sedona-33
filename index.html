@@ -89,7 +89,7 @@
                            <div class="advantages-box light-blue">
                               <img class="advantages-logo" src="images/present.svg" alt="Сувениры." width="74" height="72">
                               <h3 class="advantages-detail-title">Сувениры</h3>
-                              <p class="advantages-detail-description">Не только китайского,</br>но и настоящего местного</br>производства!</p>
+                              <p class="advantages-detail-description">Не только китайского,<br>но и настоящего местного<br>производства!</p>
                            </div>
                         </li>
                      </ul>
@@ -137,14 +137,14 @@
             <span class="newsletter-subtitle">Только полезная информация и никакого спама,<br>честное бойскаутское!</span>
             <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
                <!-- При ошибке в поле ввода назначается класс field-error -->
-               <input class="field" placeholder="Ваш e-mail" type="email" name="newsletter-email" alt="Введите e-mail.">
+               <input class="field" placeholder="Ваш e-mail" type="email" name="newsletter-email">
                <button class="button newsletter-button" type="submit">Подписаться</button>
             </form>
          </section>
       </main>
       <footer class="page-footer">
          <div class="page-footer-container">
-            <section class="footer-social">
+            <div class="footer-social">
                <h2 class="visually-hidden">Наши страницы в соц сетях.</h2>
                <ul class="footer-social-list">
                   <li class="footer-social-item">
@@ -172,11 +172,11 @@
                      </a>
                   </li>
                </ul>
-            </section>
-            <section class="footer-contacts">
-               <a class="footer-contacts-phone" href="tel:+7 (812) 812-12-12">+7 (812) 812-12-12</a>
-            </section>
-            <secton class="page-developer">
+              </div>
+            <div class="footer-contacts">
+               <a class="footer-contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+            </div>
+            <div class="page-developer">
                <a class="developer-logo" alt="Логотип академии." href="https://htmlacademy.ru/">
                   <svg class="academy-logo" aria-hidden="true" focusable="false" width="115" height="33" viewBox="0 0 115 33"  xmlns="http://www.w3.org/2000/svg">
                      <path d="M0 12.8999V15.4999H2.5V12.8999H0Z" fill="evenodd"/>
@@ -193,7 +193,7 @@
                      <path d="M109.4 27.0001L105.8 18.1001H103.6L108.4 29.7001C108.1 30.6001 107.7 30.9001 106.7 30.9001H104.2V32.9001H106.7C108.5 32.9001 109.5 32.1001 110.2 30.3001L114.9 18.1001H112.8L109.4 27.0001Z" fill="evenodd"/>
                   </svg>
                </a>
-            </secton>
+              </div>
          </div>
       </footer>
       <div class="modal-wrapper">
@@ -219,7 +219,7 @@
                      </div>
                      <div>
                         <div class="field-group">
-                           <label class="modal-label"for="leave-date">Дата выезда:</label>
+                           <label class="modal-label" for="leave-date">Дата выезда:</label>
                            <div class="date-wrapper">
                               <input class="input-date" type="text" id="leave-date" name="leave-date" placeholder="1 сентября 2021">
                               <button class="date-logo" type="button"></button>
