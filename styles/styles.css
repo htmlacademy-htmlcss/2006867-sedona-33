@@ -490,18 +490,18 @@ color: inherit;
 }
 
 
-#light-blue{
+.light-blue{
     background: rgba(131, 179, 211, 0.12);
     ;
 
 }
 
-#white{
+.white{
     background: #FFFFFF;
     
 }
 
-#middle-blue{
+.middle-blue{
     background: rgba(131, 179, 211, 0.2);
     
 } 
