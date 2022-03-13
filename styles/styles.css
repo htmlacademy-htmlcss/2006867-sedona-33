@@ -25,7 +25,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	min-height: 100%;
-	font-family: "PT Sans", sans-serif;
+	font-family: "PT Sans", "Arial", sans-serif;
 	font-size: 18px;
 	line-height: 21px;
 	background-color: #FFFFFF;
@@ -666,7 +666,7 @@ body {
 }
 
 .button-apply {
-	font-family: "PT Sans", sans-serif;
+	font-family: "PT Sans", "Arial", sans-serif;
 	font-style: normal;
 	border: none;
 	font-size: 16px;
@@ -729,7 +729,7 @@ body {
 }
 
 .button-reset {
-	font-family: "PT Sans", sans-serif;
+	font-family: "PT Sans", "Arial", sans-serif;
 	font-style: normal;
 	margin-top: 3px;
 	border-radius: 4px;
@@ -794,7 +794,7 @@ body {
 	border: none;
 	outline: 2px solid #E6E6E6;
 	border-radius: 4px;
-	font-style: "PT Sans", sans-serif;
+	font-style: "PT Sans", "Arial", sans-serif;
 	font-size: 16px;
 	line-height: 23px;
 	font-weight: 400;
@@ -1168,7 +1168,7 @@ body {
 }
 
 .newsletter-button {
-	font-family: "PT Sans", sans-serif;
+	font-family: "PT Sans", "Arial", sans-serif;
 	font-style: normal;
 	border: none;
 	background: #83B3D3;
@@ -1230,7 +1230,7 @@ body {
 }
 
 .field::placeholder {
-	font-family: "PT Sans", sans-serif;
+	font-family:"PT Sans", "Arial", sans-serif;
 	font-style: normal;
 	font-size: 18px;
 	line-height: 26px;
@@ -1309,7 +1309,7 @@ body {
 
 .modal-title {
 	margin: 0;
-	font-family: "PT Sans", sans-serif;
+	font-family: "PT Sans", "Arial", sans-serif;
 	font-size: 30px;
 	min-height: 67px;
 	line-height: 40px;
@@ -1322,7 +1322,7 @@ body {
 .modal-label {
 	box-sizing: border-box;
 	position: relative;
-	font-family: "PT Sans", sans-serif;
+	font-family: "PT Sans", "Arial", sans-serif;
 	font-size: 18px;
 	line-height: 40px;
 	font-weight: 700;
@@ -1334,7 +1334,7 @@ body {
 
 .input-date {
 	position: relative;
-	font-family: "PT Sans", sans-serif;
+	font-family: "PT Sans", "Arial", sans-serif;
 	font-size: 18px;
 	line-height: 40px;
 	font-weight: 700;
@@ -1348,7 +1348,7 @@ body {
 }
 
 .input-date::placeholder {
-	font-family: "PT Sans", sans-serif;
+	font-family: "PT Sans", "Arial", sans-serif;
 	color: #000000;
 	font-size: 18px;
 }
@@ -1490,7 +1490,7 @@ body {
 
 .search-form-button {
 	width: 575px;
-	font-family: "PT Sans", sans-serif;
+	font-family: "PT Sans", "Arial", sans-serif;
 	font-size: 20px;
 	line-height: 40px;
 	font-weight: 700;
@@ -1556,17 +1556,12 @@ body {
 	cursor: pointer;
 }
 
-.children-info:hover {
-	background-color: #68A2CA;
-}
-
 .popup {
 	position: absolute;
 	box-sizing: border-box;
 	padding: 15px 18px 18px 22px;
 	width: 256px;
 	height: 148px;
-	position: absolute;
 	left: -118px;
 	top: 46px;
 	z-index: 1;
@@ -1577,6 +1572,17 @@ body {
 	line-height: 20px;
 	color: #ffffff;
 	display: none;
+}
+
+.children-info:hover{
+    background-color: #68A2CA;
+}
+
+.children-info:hover ~ .popup{
+
+    display: block;
+    left: 50%;
+    transform: translate(-50%);
 }
 
 .range {
@@ -1631,7 +1637,7 @@ body {
 	border: 2px solid #ffffff;
 	border-radius: 4px 0px 0px 4px;
 	background-color: transparent;
-	font-family: "PT Sans", sans-serif;
+	font-family: "PT Sans", "Arial", sans-serif;
 	font-size: 18px;
 	line-height: 23px;
 	font-weight: 400;
@@ -1671,12 +1677,12 @@ body {
 }
 
 .input-control {
-	font-family: "PT Sans", sans-serif;
+	font-family: "PT Sans", "Arial", sans-serif;
 	position: relative;
 }
 
 .input-control label {
-	font-family: "PT Sans", sans-serif;
+	font-family: "PT Sans", "Arial", sans-serif;
 	font-weight: 400;
 	cursor: pointer;
 	position: absolute;
